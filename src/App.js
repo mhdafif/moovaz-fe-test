@@ -1,24 +1,22 @@
 import React from 'react';
-import logo from './logo.svg';
+import { Paper, Grid } from './styles';
 import './App.css';
+import { Header } from './component/Header';
+import { Left } from './component/Left';
+import { Right } from './component/Right';
 
 function App() {
+
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div style={{width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center'}}>
+      <Header />
+      <Paper style={{width: '80%', justifyContent: 'center', alignItems: 'center'}}>
+        <Grid container style={{marginBottom: '24px'}}>
+          <Left />
+          <Right />
+        </Grid>
+      </Paper>
     </div>
   );
 }
